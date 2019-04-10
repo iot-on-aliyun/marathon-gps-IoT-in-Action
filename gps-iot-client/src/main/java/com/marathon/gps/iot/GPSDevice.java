@@ -41,7 +41,7 @@ public class GPSDevice {
         ScheduledExecutorService scheduledThreadPool = new ScheduledThreadPoolExecutor(1,
                 new ThreadFactoryBuilder().setNameFormat("thread-runner-%d").build());
 
-       //scheduledThreadPool.scheduleAtFixedRate(()->postDeviceProperties(), 10,10, TimeUnit.SECONDS);
+       scheduledThreadPool.scheduleAtFixedRate(()->postDeviceProperties(), 10,10, TimeUnit.SECONDS);
 
     }
 
